@@ -1,4 +1,4 @@
-# template
+# vue-cli3 iview template
 
 ## Project setup
 ```

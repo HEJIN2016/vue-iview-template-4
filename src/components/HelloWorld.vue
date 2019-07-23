@@ -37,6 +37,20 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  async created () {
+    await this.set();
+    console.log("2");
+  },
+  methods: {
+    set() {
+      return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+          console.log("1");
+          resolve();
+        }, 2000)
+      })
+    }
   }
 }
 </script>

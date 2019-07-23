@@ -3,6 +3,10 @@ const LessFunc = require('less-plugin-functions');
 module.exports = {
   lintOnSave: false,
   css: {
+    // 是否使用css分离插件 ExtractTextPlugin
+    extract: process.env.NODE_ENV === 'production',
+    // 开启 CSS source maps
+    sourceMap: true,
     loaderOptions: {
       less: {
         javascriptEnabled: true,

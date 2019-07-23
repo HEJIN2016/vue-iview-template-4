@@ -9,8 +9,7 @@
 </template>
 
 <style lang="less">
-  @import '~iview/src/styles/index.less';
-  @primary-color: blue;
+
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

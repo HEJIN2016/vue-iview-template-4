@@ -1,7 +1,7 @@
 const LessFunc = require('less-plugin-functions');
-require('webpack-chain');
 
 module.exports = {
+  lintOnSave: false,
   css: {
     loaderOptions: {
       less: {
@@ -31,4 +31,4 @@ module.exports = {
     //   }
     // }
   }
-}
+};

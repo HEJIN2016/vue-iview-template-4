@@ -6,7 +6,7 @@ module.exports = {
   ]
   ],
   plugins: [["import", {
-    libraryName: "iview",
+    libraryName: "view-design",
     libraryDirectory: "src/components"
   }]]
 };

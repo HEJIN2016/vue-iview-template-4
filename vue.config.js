@@ -1,12 +1,13 @@
 const LessFunc = require('less-plugin-functions');
+const isPro = process.env.NODE_ENV === 'production'
 
 module.exports = {
   lintOnSave: false,
   css: {
     // 是否使用css分离插件 ExtractTextPlugin
-    extract: process.env.NODE_ENV === 'production',
+    extract: isPro,
     // 开启 CSS source maps
-    sourceMap: true,
+    sourceMap: !isPro,
     loaderOptions: {
       less: {
         javascriptEnabled: true,
@@ -17,8 +18,8 @@ module.exports = {
   chainWebpack:  config => {
     // ie报错无效字符 添加该配置项 解决该问题
     config.module
-      .rule('iview')
-      .test(/iview.src.*?js$/)
+      .rule('view-design')
+      .test(/view-design.src.*?js$/)
       .use('babel')
       .loader('babel-loader')
       .end()
